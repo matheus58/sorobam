@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu_sorobam</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="bg-dark text-white py-4">
+        <div class="container">
+            <h1>Desafio Sorobam</h1>
+        </div>
+     
+    </header>
+    <main class="container mt-4">
+        <form action="escolhas_do_jogador" class="row g-3">
+            <div class="col-md-4">
+                <label for="tempo" class="form-label">Tempo:</label>
+                <select name="tempo" id="tempo" class="form-select">
+                    <option value="1">1 min</option>
+                    <option value="5">5 min</option>
+                    <option value="10">10 min</option>
+                    <option value="15">15 min</option>
+                    <option value="20">20 min</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <label for="quantos_algorismos" class="form-label">Algarismos:</label>
+                <select name="quantos_algorismos" id="quantos_algorismos" class="form-select">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <label for="quantidade_de_numeros" class="form-label">Quantidade de números</label>
+                <select name="quantidade_de_numeros" id="quantidade_de_numeros" class="form-select">
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="25">25</option>
+                    <option value="30">30</option>
+                </select>
+            </div>  
+            <div class="col-md-6"> <!-- Coluna de 6 colunas para o countdown -->
+                <div id="cronometro"></div> <!-- Countdown -->
+            </div>
+            <div class="col-md-6 text-end"> <!-- Coluna de 6 colunas para o gerarConta (alinhada à direita) -->
+                <div id="gerarConta"></div> <!-- Gerar conta -->
+            </div>
+            <div class="col-12">
+                <input type="number" class="form-control" id="resposta" placeholder="Insira sua resposta">
+                <br>
+                <button type="button" class="btn btn-dark" onclick="relogio(); criar_conta();">Start</button>
+                <button type="button" class="btn btn-secondary" onclick="verificar_resposta()">responder</button> <!-- Botão de submit -->
+            </div>
+        </form>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="revatorado.js"></script>
+    </main>
+    <footer>
+        
+    </footer>
+</body>
+</html>
